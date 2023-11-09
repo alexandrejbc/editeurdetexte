@@ -30,4 +30,14 @@ public class Document {
         String rightPart = texte.substring(end);
         texte = leftPart + remplacement + rightPart;
     }
+
+    public void majuscules(int start, int end) {
+        // Check if the end index is beyond the string length.
+        if (end > texte.length()) {
+            end = texte.length();
+        }
+        // Extract the substring that will be converted to uppercase.
+        String toUpper = texte.substring(start, end).toUpperCase();
+        remplacer(start,end,toUpper);
+    }
 }
