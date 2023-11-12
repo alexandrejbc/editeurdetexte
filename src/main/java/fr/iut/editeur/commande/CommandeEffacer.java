@@ -8,8 +8,8 @@ public class CommandeEffacer extends CommandeDocument{
     }
     @Override
     public void executer() {
-        if (parameters.length < 3) {
-            System.err.println("Format attendu : effacer;indexDebut;indexFin;");
+        if (parameters.length != 3) {
+            System.err.println("Format attendu : effacer;indexDebut;indexFin");
             return;
         }
         this.document.effacer(Integer.parseInt(parameters[1]),Integer.parseInt(parameters[2]));
