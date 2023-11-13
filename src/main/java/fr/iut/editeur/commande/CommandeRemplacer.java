@@ -8,11 +8,11 @@ public class CommandeRemplacer extends CommandeDocument {
 
     @Override
     public void executer() {
-        if (parameters.length < 3) {
+        if (parameters.length < 3 || parameters.length > 4) {
             System.err.println("Format attendu : remplacer;indexDebut;indexFin;texte ou remplacer;indexDebut;indexFin;");
             return;
         }
-        if (parameters.length == 4) {
+        else if (parameters.length == 4) {
             String texte = parameters[3];
             this.document.remplacer(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]), texte);
             super.executer();
