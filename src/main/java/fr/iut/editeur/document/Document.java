@@ -44,6 +44,7 @@ public class Document {
         remplacer(start,end,"");
     }
     public void clear(){
-        texte = "d";
+        texte = "";
+        //issue fixed
     }
 }
